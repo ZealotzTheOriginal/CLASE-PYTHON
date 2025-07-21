@@ -1,0 +1,104 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: #165AE2;
+}
+
+body {
+    background-color: #145ECC;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    font-size: large;
+    height: 75px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    max-width: 90%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    font-size: large;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    opacity: 70%;
+}
+
+main {
+    font-size: large;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 20px;
+    width: 70%;
+    opacity: 70%;
+}
+
+.container2 {
+    gap: 20px; /* Optional: Adds a gap between nav and main */
+    margin: 40px auto 0; /* Centers the container with a top margin */
+    max-width: 90%; /* Or a fixed value like 1200px */
+}
+
+main > div > p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex; /* Aligns children (nav and main) in a row */
+    justify-content: space-between; /* Optional: Puts space between them */
+    gap: 20px; /* Optional: Adds a gap between nav and main */
+    margin: 40px auto 0; /* Centers the container with a top margin */
+    max-width: 90%; /* Or a fixed value like 1200px */
+    align-items: center;
+    justify-content: center;
+}
+
+article {
+    font-size: large;
+    width: 500px;
+    height: 30px;
+    background-color: rgb(245, 245, 245);
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+footer {
+    font-size: large;
+    height: 75px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    max-width: 90%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 70%;
+}

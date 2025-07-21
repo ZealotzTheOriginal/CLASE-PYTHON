@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        /* div[class^='col-'] {
+            border: 5px solid white;
+        } */
+
+        .verde {
+            background-color: lightgreen;
+            height: 80px;
+            border: 5px solid white;
+        }
+
+        .azul {
+            background-color: #86A9DF;
+            height: 250px;
+            border: 5px solid white;
+        }
+
+        .gris {
+            background-color: #DDDDDD;
+            height: 250px;
+            border: 5px solid white;
+        }
+
+        .celeste {
+            background-color: lightskyblue;
+            height: 80px;
+            border: 5px solid white;
+
+        }
+
+        .orange {
+            background-color: #FF9951;
+            height: 160px;
+            border: 5px solid white;
+        }
+        div{
+            text-align: center;
+            font-size: 24px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-lg-12 verde">Header</div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-6 col-sm-3 offset-md-3 azul">1</div>
+        <div class="col-6 col-sm-3 azul">2</div>
+        <div class="w-100 d-none d-md-block"></div>
+        <div class="col-6 col-sm-3 azul">3</div>
+        <div class="col-6 col-sm-3 offset-md-6 azul">4</div>
+    </div>
+    <div class="row">
+        <div class="d-none col-sm-12 d-sm-block d-md-none celeste">Tablet</div>
+    </div>
+    <div class="row">
+        <div class="col-6 col-sm-3 order-md-4 gris">a</div>
+        <div class="col-6 col-sm-3 order-md-3 gris">b</div>
+        <div class="col-6 col-sm-3 order-md-2 gris">c</div>
+        <div class="col-6 col-sm-3 order-md-1 gris ">d</div>
+    </div>
+    <div class="row">
+        <div class="d-none d-md-block col-md-12 celeste">Desktop</div>
+        <div class="col-12 d-sm-none  celeste">Mobile</div>
+    </div>
+    
+    <div class="row">
+        <div class="d-none col-sm-6 d-sm-block order-sm-2 offset-md-3 col-md-3 orange">:(</div>
+        <div class="col-12 col-sm-6 col-md-3 order-md-2 orange">:D</div>
+    </div>
+    
+
+    </div>
+    </div>
+    <div class="row">
+        <div class="d-none col-sm-12 d-sm-block verde">Footer</div>
+    </div>
+</body>
+
+</html>

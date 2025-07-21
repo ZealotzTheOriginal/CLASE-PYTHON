@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi CV Personal - [Tu Nombre]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./STATIC/CSSGPT.CSS">
+</head>
+<body>
+    <header class="hero-section flex-center">
+        <div class="hero-content">
+            <img src="../HTML/STATIC/IMG/alien.png" alt="Foto de Perfil de [Tu Nombre]" class="profile-photo">
+            <h1>[Tu Nombre Completo]</h1>
+            <p class="tagline">Desarrollador Web Front-End con pasión por el código limpio y la experiencia de usuario.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about" class="card">
+            <h2>Sobre Mí</h2>
+            <p>Soy un desarrollador web con experiencia en la creación de interfaces de usuario interactivas y responsivas. Me encanta transformar ideas en soluciones digitales funcionales y estéticamente agradables. Constantemente busco aprender nuevas tecnologías y mejorar mis habilidades para entregar productos de alta calidad.</p>
+        </section>
+
+        <section id="experience" class="card">
+            <h2>Experiencia Laboral</h2>
+            <div class="job-entry">
+                <h3>Desarrollador Front-End Senior</h3>
+                <p class="company">Tech Solutions S.A. | Ene 2022 - Presente</p>
+                <ul>
+                    <li>Lideré el desarrollo de componentes UI reutilizables utilizando React y Styled Components.</li>
+                    <li>Colaboré en el diseño de la arquitectura front-end de nuevas aplicaciones.</li>
+                    <li>Optimicé el rendimiento de las aplicaciones, reduciendo los tiempos de carga en un 20%.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <h3>Desarrollador Web Junior</h3>
+                <p class="company">Innovatech | Jul 2019 - Dic 2021</p>
+                <ul>
+                    <li>Participé en el desarrollo de sitios web e-commerce con HTML, CSS y JavaScript vanilla.</li>
+                    <li>Implementé funcionalidades interactivas utilizando jQuery.</li>
+                    <li>Asistí en la resolución de bugs y el mantenimiento de proyectos existentes.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education" class="card">
+            <h2>Educación</h2>
+            <div class="education-entry">
+                <h3>Grado en Ingeniería Informática</h3>
+                <p class="institution">Universidad Politécnica de Cataluña | 2015 - 2019</p>
+                <p>Especialización en Desarrollo de Software.</p>
+            </div>
+            <div class="education-entry">
+                <h3>Máster en Diseño UX/UI</h3>
+                <p class="institution">Escuela de Diseño Digital | 2020 - 2021</p>
+                <p>Enfoque en usabilidad, accesibilidad y prototipado.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="card">
+            <h2>Habilidades</h2>
+            <div class="skill-category">
+                <h3>Técnicas</h3>
+                <ul class="skills-list">
+                    <li>HTML5 & CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React.js, Vue.js</li>
+                    <li>Node.js, Express.js</li>
+                    <li>Git & GitHub</li>
+                    <li>Bases de Datos (SQL, NoSQL)</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Sociales</h3>
+                <ul class="skills-list">
+                    <li>Comunicación efectiva</li>
+                    <li>Trabajo en equipo</li>
+                    <li>Resolución de problemas</li>
+                    <li>Adaptabilidad</li>
+                    <li>Proactividad</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="card">
+            <h2>Contacto</h2>
+            <p>¿Interesado en colaborar o simplemente saludar? Rellena el formulario:</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

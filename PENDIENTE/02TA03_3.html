@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Dos Columnas Flotadas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Contenedor de las columnas */
+        .row-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Espacio para el contenido posterior */
+        }
+
+        /* Limpiar floats (clearfix) */
+        /* Esta técnica asegura que el contenedor padre (.row-container)
+           envuelva correctamente a sus hijos flotados. */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Estilos de las columnas */
+        .column {
+            padding: 20px;
+            box-sizing: border-box; /* Incluye padding y border en el ancho total */
+        }
+
+        .column-70 {
+            float: left; /* Flota a la izquierda */
+            width: 70%;  /* Ocupa el 70% del ancho del padre */
+            background-color: #a8dadc; /* Color para la columna principal */
+            border-radius: 6px;
+        }
+
+        .column-30 {
+            float: left; /* Flota a la izquierda (o right para que se pegue al otro lado) */
+            width: 30%;  /* Ocupa el 30% del ancho del padre */
+            background-color: #457b9d; /* Color para la columna lateral */
+            color: white;
+            border-radius: 6px;
+        }
+
+        /* Contenido que sigue a las columnas */
+        .after-columns-content {
+            background-color: #e6e6e6;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Diseño de Dos Columnas Flotadas</h1>
+
+    <div class="row-container clearfix">
+        <div class="column column-70">
+            <h2>Columna Principal (70%)</h2>
+            <p>Este es el contenido de la columna más ancha. Aquí puedes poner la información principal o el cuerpo de tu artículo. La columna ocupa el 70% del ancho disponible.</p>
+            <p>Al flotar ambos elementos y usar un clearfix en el contenedor padre, nos aseguramos de que el diseño se mantenga ordenado y que los elementos siguientes en el HTML no se posicionen de forma inesperada.</p>
+        </div>
+        <div class="column column-30">
+            <h3>Columna Lateral (30%)</h3>
+            <p>Este es el contenido de la columna más estrecha. Ideal para barras laterales, anuncios o contenido secundario. Ocupa el 30% del ancho restante.</p>
+        </div>
+    </div>
+
+    <div class="after-columns-content">
+        <h2>Contenido Después de las Columnas</h2>
+        <p>Este bloque de contenido viene *después* de las columnas flotadas. Gracias a la clase `clearfix` aplicada al `div.row-container`, este contenido se posiciona correctamente debajo de ambas columnas, sin "subir" junto a ellas.</p>
+    </div>
+
+</body>
+</html>
