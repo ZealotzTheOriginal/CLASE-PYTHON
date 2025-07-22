@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primario: rgb(14, 102, 85);
+    --color-secundario: rgb(90, 138, 183);
+    --color-acento: rgb(220, 130, 74);
+    --color-claro: rgb(104, 211, 189);
+    --color-oscuro: rgb(5, 39, 32);
+    --espaciado: 1rem;
+    --borde-redondo: 10px;
+    --sombra-suave: 0 4px 6px rgba(0, 0, 0, 0.085);
+    --fuente-base: "Segoe IU", sans-serif;
+}
+
+body{
+    background: linear-gradient(to right,var(--color-primario),var(--color-secundario));
+    padding: var(--espaciado);
+    border-radius: var(--borde-redondo);
+    font-family: var(--fuente-base);
+    color: var(--color-oscuro);
+}
+
+header{
+    background-color: rgba(104, 211, 189, 0.2);
+    color: var(--color-claro);
+    padding: var(--espaciado);
+    border-radius: var(--borde-redondo);
+    box-shadow: var(--sombra-suave);
+    margin-bottom: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+header h1{
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+header p{
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.6;
+    float: right;
+}
+
+header button{
+    background-color: var(--color-acento);
+    color: var(--color-oscuro);
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: var(--espaciado);
+    border-radius: var(--borde-redondo);
+    cursor: pointer;
+    box-shadow: var(--sombra-suave);
+    transition: all 0.3s ease;
+}
+
+header button:hover{
+    background-color: yellow;
+    transform: scale(1.05);
+}
+
+header img{
+    float: left;
+    box-shadow: var(--sombra-suave);
+}
