@@ -4,11 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barra de Navegación con Float (Separada)</title>
-    <link rel="stylesheet" href="./STATIC/CSS/02TA03_1.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .nav-item {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .nav-item:last-child {
+            margin-right: 0;
+        }
+
+        .nav-link {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
 </head>
+
 <body>
 
-    <nav class="navbar">
+    <nav class="navbar clearfix">
         <div class="container">
             <ul class="nav-list">
                 <li class="nav-item"><a href="#" class="nav-link">Lorem</a></li>
@@ -24,10 +86,6 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima odit autem, veniam officiis excepturi molestias nam, quas obcaecati nesciunt laudantium maxime nihil culpa, reiciendis corrupti in et! Natus quisquam, placeat velit adipisci quo quas est enim nesciunt veniam nisi ratione ab dignissimos quaerat facere corporis culpa impedit explicabo amet sequi ipsa maiores omnis ut. Reiciendis esse, vel consequatur aliquam hic dolorem eos nemo distinctio impedit laboriosam quod corporis accusamus quas beatae unde dicta! Fugit iusto qui blanditiis eum quisquam magni accusamus consequuntur architecto inventore, dolores asperiores possimus cumque totam doloribus numquam maxime repellat, ipsa, temporibus illum voluptatem delectus! Reiciendis nesciunt quo accusamus quia, aut quasi minus. Praesentium doloremque maiores cumque odio eligendi qui, delectus at, alias quisquam autem atque! Aspernatur dolore, exercitationem tempora tenetur esse similique magni voluptatem nemo. Soluta enim fugit magnam eligendi tempora, illo quas veniam labore facere perspiciatis nihil blanditiis nulla et earum ex ipsum beatae aperiam doloremque unde perferendis. Libero cupiditate necessitatibus incidunt, nesciunt ullam cumque! Exercitationem sunt praesentium sint aut, vel autem inventore beatae enim nulla voluptates qui necessitatibus laudantium repellat quasi hic quos explicabo laborum officia voluptate. Aperiam magni asperiores ullam ducimus laudantium, facilis ipsum nostrum doloribus vel commodi vero! Aliquam dolore sequi, eius et quibusdam laudantium unde repellat veritatis eveniet reprehenderit assumenda totam sunt illo iste, odit voluptatum nihil ipsam beatae voluptas quia sed sit! Quidem, rem architecto. Similique quasi voluptas laudantium modi saepe vitae vel in amet distinctio numquam! Rem ut nesciunt, nisi, molestias aliquam rerum provident inventore sit ipsam qui cum? Delectus repellendus amet natus id tenetur. Cum, ipsam eveniet doloribus doloremque corporis earum quo mollitia debitis. Similique porro modi provident unde quia tenetur quibusdam vel officiis laudantium vitae. Tempore architecto asperiores animi nostrum quo ipsam commodi quisquam sunt fuga vel reiciendis est, at labore eaque quibusdam possimus dolore tempora non voluptate, temporibus necessitatibus, impedit ipsa ab. Quas quasi reprehenderit et itaque qui aut eius libero, ratione dolorum magni rerum beatae earum neque, vero minima facere expedita voluptatem. Possimus officia molestiae dolorem laborum impedit minus esse sint at est fuga, nulla saepe illo maxime ex id libero fugiat illum minima. Sequi nesciunt, ratione non distinctio dolorum officia amet fuga consequatur temporibus molestias? Iusto nihil nisi possimus, earum neque facilis culpa quo blanditiis quos magnam perspiciatis harum suscipit quisquam, qui eaque voluptate? Assumenda voluptates in delectus numquam ipsa tenetur fuga cum et neque sequi excepturi laudantium eos cupiditate, perspiciatis libero? Deserunt, dolore?</p>
         </div>
     </div>
-
-    <a href="./02TA03_1.html">
-        <button class="btn-fixed">Prueba</button>
-    </a>
 
 </body>
 </html>

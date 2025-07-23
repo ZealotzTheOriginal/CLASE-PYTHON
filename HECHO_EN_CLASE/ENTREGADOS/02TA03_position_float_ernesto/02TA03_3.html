@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Dos Columnas Flotadas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .row-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .column {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .column-70 {
+            float: left;
+            width: 70%;
+            background-color: #a8dadc;
+            border-radius: 6px;
+        }
+
+        .column-30 {
+            float: left;
+            width: 30%;
+            background-color: #457b9d;
+            color: white;
+            border-radius: 6px;
+        }
+
+        .after-columns-content {
+            background-color: #e6e6e6;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Titulo (Antes del Clearfix)</h1>
+
+    <div class="row-container clearfix">
+        <div class="column column-70">
+            <h2>(70%)</h2>
+        </div>
+        <div class="column column-30">
+            <h3>(30%)</h3>
+        </div>
+    </div>
+
+    <div class="after-columns-content">
+        <h2>Titulo (Luego del Clearfix)</h2>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    background-color: #202124;
+    color: white;
+    border: 0;
+    margin: 16px;
+}
+
+body{
+    background-color: #202124;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+}
+
+.nav_izq{
+    display: flex;
+    width: 50vw;
+}
+
+.nav_der{
+    display: flex;
+    width: 50vw;
+    justify-content: end;
+}
+
+header{
+    width: 100vw;
+    font-family: "Product Sans";
+}
+
+.header_logo{
+    color: white;
+}
+
+h1{
+    text-align: center;
+    font-size: 90px;
+    margin-bottom: 30px;
+}
+
+main > .busqueda{
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.azul{
+    color: #89C3FF;
+}
+
+.busqueda{
+    margin-left: 20%;
+    background-color: #4D5156;
+    width: 60%;
+    height: 44px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    border-radius: 50px;
+}
+
+i{
+    margin: 12px;
+}
+
+.center{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.center button{
+    background-color: #303134;
+    padding: 12px;
+    border-radius: 4px;
+    margin: 6px;
+}
+
+main p{
+    margin-top: 20px;
+}
+
+.idiomas{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+}
+
+input{
+    width: 100%;
+    background-color: #4D5156;
+    border: 0;
+    color: white;
+}
+
+.main_bar{
+    display: flex;
+    width: 100vw;
+}
+
+.section_pais{
+    color: white;
+    background-color: #171717;
+    margin-top: 80px;
+    padding: 15px;
+    border-bottom: 1px solid #4D5156;
+}
+
+.section_final{
+    color: white;
+    background-color: #171717;
+    padding: 18px;
+    text-align: center;
+}
+
+.footer_izq{
+    display: flex;
+    width: 50vw;
+}
+
+.footer_der{
+    display: flex;
+    width: 50vw;
+    justify-content: end;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+    background-color: #171717;
+}
