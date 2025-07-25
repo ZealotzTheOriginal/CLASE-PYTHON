@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+
 }
 
 button{
@@ -8,16 +9,24 @@ button{
     color: white;
     border: 0;
     margin: 16px;
+    cursor: pointer;
 }
 
+button:hover{
+    text-decoration: underline;
+}
+
+
 body{
+    display: flex;
+    flex-direction: column;
     background-color: #202124;
 }
 
 nav{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    height: 51px;
     gap: 20px;
 }
 
@@ -32,19 +41,24 @@ nav{
     justify-content: end;
 }
 
+.nav_der i{
+    padding: 0%;
+}
+
 header{
-    width: 100vw;
-    font-family: "Product Sans";
+    width: 99vw;
 }
 
 .header_logo{
     color: white;
 }
 
-h1{
+.header_logo p{
+    font-family: "Poppins", sans-serif;
     text-align: center;
     font-size: 90px;
     margin-bottom: 30px;
+    font-weight: 500;
 }
 
 main > .busqueda{
@@ -55,51 +69,103 @@ main > .busqueda{
 
 .azul{
     color: #89C3FF;
+    cursor: pointer;
+}
+
+.azul:hover{
+    text-decoration: underline;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.pointer:hover{
+    text-decoration: underline;
 }
 
 .busqueda{
-    margin-left: 20%;
+    margin-left: 28%;
     background-color: #4D5156;
-    width: 60%;
-    height: 44px;
+    width: 44%;
+    height: 50px;
     color: white;
     display: flex;
     flex-direction: row;
     border-radius: 50px;
 }
 
-i{
-    margin: 12px;
+.busqueda:hover{
+    background-color: #74797f;
 }
 
+.main_bar i{
+    justify-content: center;
+}
+
+i{
+    padding: 16px;
+    width: 16px;
+    min-width: 16px;
+    height: 100%;
+    cursor: pointer;
+    opacity: 65%;
+}
+
+.minus8pxr{
+    padding-right: 8px;
+}
+
+.minus8pxl{
+    padding-left: 8px;
+}
+
+
 .center{
-    margin-top: 10px;
+    display: block;
+    margin-top: 16px;
     text-align: center;
 }
 
 .center button{
     background-color: #303134;
-    padding: 12px;
+    padding: 8px 16px 8px 16px;
+    border: 1px solid #303134;
     border-radius: 4px;
-    margin: 6px;
+    margin: 5px;
+    text-decoration: none;
 }
+
+.center button:hover{
+    border: 1px solid #5F6368;
+}
+
 
 main p{
     margin-top: 20px;
 }
 
 .idiomas{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 20px;
-    color: white;
+    font-family: "Arial", sans-serif;
+    margin-top: 45px;
+    color: #BFBFBF;
     text-align: center;
+    font-size: 13px;
 }
 
 input{
     width: 100%;
+    height: 50px;
     background-color: #4D5156;
+    opacity: 0%;
     border: 0;
     color: white;
+}
+
+input:focus {
+    outline: none; /* Removes the default focus outline */
+    border: 0; /* Ensures no border appears on focus, though 'border: 0' above already handles this for the base state */
+    box-shadow: none; /* Removes any potential shadow that might appear on focus */
 }
 
 .main_bar{
@@ -110,7 +176,7 @@ input{
 .section_pais{
     color: white;
     background-color: #171717;
-    margin-top: 80px;
+    margin-top: 40px;
     padding: 15px;
     border-bottom: 1px solid #4D5156;
 }
@@ -134,9 +200,10 @@ input{
 }
 
 footer{
+    float: inline-end;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 100vw;
     gap: 20px;
     background-color: #171717;
 }
