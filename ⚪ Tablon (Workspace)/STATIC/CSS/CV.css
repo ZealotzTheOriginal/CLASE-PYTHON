@@ -90,8 +90,7 @@ html, body {
 
 i{
     color: white;
-    width: 16px;
-    height: 16px;
+    font-size: 16px;
     text-decoration: none;
 }
 
@@ -112,7 +111,9 @@ i{
 }
 
 .botones-nav a{
-    text-align: start;
+    display: flex;
+    width: 100%;
+    text-align: center;
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
@@ -125,6 +126,7 @@ i{
     height: 30px;
     margin-right: 10px;
     color: rgb(187, 187, 187);
+    font-size: 20px;
 }
 
 .botones-nav a:hover{
