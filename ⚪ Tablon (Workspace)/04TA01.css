@@ -1,0 +1,82 @@
+:root {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --primary-color: #fff6f6;
+    --primary-hover-color: #96ff9c;
+    --console-bg: #0d0d0d;
+    --console-text: #2fff8d;
+    --border-color: #444;
+    --button-text-color: #000000;
+    --border-radius: 8px;
+    --spacing-medium: 15px;
+    --spacing-large: 20px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin: var(--spacing-large);
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: var(--spacing-medium);
+}
+
+button {
+    margin: 8px;
+    border: none;
+    padding: 8px;
+    border-radius: var(--border-radius);
+    background: var(--primary-color);
+    color: var(--button-text-color);
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+button:hover {
+    background-color: var(--primary-hover-color);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+    background-color: #3e8e41;
+}
+
+button:focus {
+    outline: 2px solid var(--console-text);
+    outline-offset: 2px;
+}
+
+#output-console {
+    margin-top: var(--spacing-large);
+    padding: var(--spacing-medium);
+    border: 1px solid var(--border-color);
+    background-color: var(--console-bg);
+    color: var(--console-text);
+    min-height: 150px;
+    max-height: 400px;
+    overflow-y: auto;
+    font-family: 'Fira Code', 'Cascadia Code', 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    white-space: pre-wrap;
+    word-break: break-all;
+    border-radius: var(--border-radius);
+}
+
+@media (max-width: 768px) {
+    button {
+        width: 90%;
+        max-width: 300px;
+    }
+    body {
+        margin: var(--spacing-medium);
+    }
+}
