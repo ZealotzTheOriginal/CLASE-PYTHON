@@ -81,10 +81,13 @@ writeToConsole(`✅ · Ejercicio 4
 
 Tus numeros son "${var_1}" y ${var_2}
 
-1️⃣ ( == ) "${var_1}" es igual a ${var_2} + Coersión ❗${var_1 == var_2}
+1️⃣ ( == ) Posible Coersión y "${var_1}" es IGUAL a ${var_2}❗${var_1 == var_2}
+
 2️⃣ ( === ) "${var_1}" es IGUAL en VALOR y TIPO a ${var_2} ❗${var_1 === var_2}
-3️⃣ ( != ) Coersión + ${var_1} es desigual a ${var_2} ❗${var_1 != var_2}
-4️⃣ ( !== ) ${var_1} No es DESIGUAL en VALOR y TIPO a ${var_2} ❗${var_1 !== var_2}
+
+3️⃣ ( != ) Posible Coersión y ${var_1} es DESIGUAL a ${var_2} ❗${var_1 != var_2}
+
+4️⃣ ( !== ) "${var_1}" es DESIGUAL en VALOR o TIPO a ${var_2} ❗${var_1 !== var_2}
 `, true);
 }
 
@@ -102,11 +105,11 @@ function EjercicioCinco() {
     entrada_usuario = entrada_usuario.toUpperCase();
 
     if (isNaN(edad_usuario) || edad_usuario < 0) {
-        writeToConsole("❌ Entrada inválida para la edad.", true);
+        writeToConsole("❌ Entrada inválida.", true);
         return;
     }
 
-    if (edad_usuario >= 18 && (entrada_usuario === "SI" || entrada_usuario === "S")) {
+    if (edad_usuario >= 18 && edad_usuario < 100 && (entrada_usuario === "SI" || entrada_usuario === "S")) {
         writeToConsole(`✅ · Ejercicio 5
 
 ❗ El Usuario SI tiene acceso a la discoteca.
@@ -181,7 +184,8 @@ function EjercicioOcho(){
             writeToConsole(`✅ Ejercicio 8
 
 Tu estudiante tiene:
-✅ Acceso al campus...
+
+✅ Acceso al campus.
 `, true);
         } else {
             writeToConsole("❌ Acceso denegado... (Matrícula no pagada)", true);
@@ -228,7 +232,9 @@ function EjercicioNueve() {
             estacion = "no es válido";
     }
     
-    writeToConsole(`El mes de ${nombreMes} es ${estacion}.`, true);
+    writeToConsole(`✅ Ejercicio 9
+
+El mes de ${nombreMes} es ${estacion}.`, true);
 }
 
 // Ejercicio 10
