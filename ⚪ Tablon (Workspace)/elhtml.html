@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiador de Color Pastel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Asegura que ocupe toda la altura de la vista */
+            margin: 0;
+            transition: background-color 0.5s ease; /* Transición suave del color de fondo */
+            background-color: #f0f8ff; /* Color inicial (AliceBlue) */
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #555;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cambia el Color de Fondo con estos Botones</h1>
+
+    <div class="button-container">
+        <button onclick="cambiarColor('pastelBlue')">Azul Pastel</button>
+        <button onclick="cambiarColor('pastelPink')">Rosa Pastel</button>
+        <button onclick="cambiarColor('pastelGreen')">Verde Pastel</button>
+        <button onclick="cambiarColor('pastelYellow')">Amarillo Pastel</button>
+    </div>
+
+    <script>
+        function cambiarColor(colorName) {
+            let colorHex;
+            switch (colorName) {
+                case 'pastelBlue':
+                    colorHex = '#B0E0E6'; // PowderBlue
+                    break;
+                case 'pastelPink':
+                    colorHex = '#FFB6C1'; // LightPink
+                    break;
+                case 'pastelGreen':
+                    colorHex = '#98FB98'; // PaleGreen
+                    break;
+                case 'pastelYellow':
+                    colorHex = '#FFFACD'; // LemonChiffon
+                    break;
+                default:
+                    colorHex = '#f0f8ff'; // Default a AliceBlue
+            }
+            // Cambia el color de fondo del body
+            document.body.style.backgroundColor = colorHex;
+        }
+    </script>
+
+</body>
+</html>
