@@ -162,6 +162,13 @@ section {
 section, .section {
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
-    padding: 60px 0;
+    padding: 5px 0;
     overflow: clip;
+}
+
+.hero{
+    width: 100%;
+    height: 100vw;
+    background-image: url(../IMG/Wallpaper/aurora2.jpg);
+    background-color: aqua;
 }

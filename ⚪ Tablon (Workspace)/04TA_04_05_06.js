@@ -27,17 +27,21 @@ function EjercicioUno() {
 2️⃣ Arreglo final: [${colores.join(', ')}]
 `, true);
   } else if (respuesta === 'no' || respuesta === 'n') {
-    writeToConsole("Operación cancelada. El color verde no se añadió.", true);
+    writeToConsole(`✅Ejercicio 1
+
+1️⃣ Arreglo inicial: [${coloresIniciales.join(', ')}]
+2️⃣ Arreglo final: [${colores.join(', ')}]
+`, true);
     return; 
   } else {
-    writeToConsole("Respuesta no válida. Por favor, responde 'sí' o 'no'.", true);
+    writeToConsole("⚠️ Respuesta no válida. Por favor, responde 'SI' o 'NO'.", true);
     return; 
   }
 }
 
 // Ejercicio 2
 function EjercicioDos() {
-  const nombreParaSaludo = prompt("1️⃣ Escribe tu nombre:").toUpperCase(); 
+  const nombreParaSaludo = prompt("1️⃣ Escribe tu nombre:").toUpperCase() || "Desconocido"; 
   writeToConsole(`✅Ejercicio 2
 
 Hola, ${nombreParaSaludo}!`, true);
@@ -49,9 +53,9 @@ const edadStr = prompt("1️⃣ Por favor, introduce tu edad:");
 const edad = parseInt(edadStr);
 
 if (isNaN(edad) || edadStr === null || edadStr.trim() === '') {
-    writeToConsole("Por favor, introduce una edad válida (solo números).", true);
+    writeToConsole("⚠️ Por favor, introduce una edad válida (solo números).", true);
 } else if (edad < 0) {
-      writeToConsole("La edad no puede ser negativa.", true);
+      writeToConsole("⚠️ La edad no puede ser negativa.", true);
 } else {
     if (edad >= 18) {
         writeToConsole(`✅Ejercicio 3
@@ -71,19 +75,44 @@ function EjercicioCuatro() {
   const lista = [];
   let suma = 0;
 
-  lista.push(parseInt(prompt("1️⃣ Introduce el primer número:")));
-  lista.push(parseInt(prompt("2️⃣ Introduce el segundo número:")));
-  lista.push(parseInt(prompt("3️⃣ Introduce el tercer número:")));
-  lista.push(parseInt(prompt("4️⃣ Introduce el cuarto número:")));
-  lista.push(parseInt(prompt("5️⃣ Introduce el quinto número:")));
+  let num1;
+  do {
+    num1 = parseInt(prompt("1️⃣ Introduce el primer número:"));
+  } while (isNaN(num1));
+  lista.push(num1);
+
+  let num2;
+  do {
+    num2 = parseInt(prompt("2️⃣ Introduce el segundo número:"));
+  } while (isNaN(num2));
+  lista.push(num2);
+
+  let num3;
+  do {
+    num3 = parseInt(prompt("3️⃣ Introduce el tercer número:"));
+  } while (isNaN(num3));
+  lista.push(num3);
+
+  let num4;
+  do {
+    num4 = parseInt(prompt("4️⃣ Introduce el cuarto número:"));
+  } while (isNaN(num4));
+  lista.push(num4);
+
+  let num5;
+  do {
+    num5 = parseInt(prompt("5️⃣ Introduce el quinto número:"));
+  } while (isNaN(num5));
+  lista.push(num5);
 
   for (let i = 0; i < lista.length; i++) {
     suma += lista[i];
   }
+
   writeToConsole(`✅Ejercicio 4
 
-Números en la lista: [${lista.join(', ')}]
-Suma de los elementos: ${suma}
+1️⃣ Números en la lista: [${lista.join(', ')}]
+2️⃣ Suma de los elementos: ${suma}
 `, true);
   writeToConsole();
 }
@@ -101,7 +130,9 @@ function EjercicioCinco() {
     writeToConsole(`✅ · Ejercicio 5
 
 ❗ El número ${numero} es: ${numero % 2 === 0 ? true : false}
-Si es True es (Par), si es False es (Impar).
+
+1️⃣ True es (Par)
+2️⃣ False es (Impar)
 `, true);
 }
 
@@ -175,6 +206,12 @@ function EjercicioNueve() {
   let impuesto = 0;
   let sueldo = prompt('1️⃣ Introduce tu sueldo actual:');
 
+  sueldo = parseFloat(sueldo);
+
+  if (isNaN(sueldo)) {
+    sueldo = 0;
+  }
+
   if (sueldo < 10000) {
     impuesto = 0;
   } else if (sueldo >= 10000 && sueldo <= 20000) {
@@ -193,7 +230,11 @@ function EjercicioNueve() {
 
 // Ejercicio 10
 function EjercicioDiez() {
-  const nombres = ["Ana", "Luis", "Marta", "Carlos", "Laura"];
+const nombresInput = prompt('1️⃣ Introduce los nombres separados por comas, o deja en blanco:');
+  const nombres = (nombresInput || "Ana, Luis, Marta, Carlos, Laura")
+  .split(',')
+  .map(nombre => nombre.trim());
+
 
   const conteoLetras = {};
 
