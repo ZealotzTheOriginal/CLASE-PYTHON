@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV de [Tu Nombre]</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>[Tu Nombre y Apellido]</h1>
+        <h2>[Tu Título Profesional]</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#educacion">Educación</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="sobre-mi">
+            <h2>Sobre Mí</h2>
+            <p>Aquí va una breve descripción personal. Sé creativo y muestra tu personalidad.</p>
+        </section>
+
+        <section id="experiencia">
+            <h2>Experiencia Laboral</h2>
+            <article>
+                <h3>[Puesto de trabajo]</h3>
+                <p><strong>[Empresa]</strong> | [Fechas]</p>
+                <ul>
+                    <li>Responsabilidad 1</li>
+                    <li>Responsabilidad 2</li>
+                </ul>
+            </article>
+            </section>
+
+        <section id="educacion">
+            <h2>Educación</h2>
+            <article>
+                <h3>[Título obtenido]</h3>
+                <p><strong>[Institución]</strong> | [Fechas]</p>
+            </article>
+            </section>
+
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>[Otra habilidad]</li>
+            </ul>
+        </section>
+
+        <aside>
+            <h3>Información Adicional</h3>
+            <p><strong>Idiomas:</strong> [Ej. Español, Inglés]</p>
+            <p><strong>Hobbies:</strong> [Ej. Lectura, senderismo]</p>
+        </aside>
+    </main>
+
+    <section id="contacto">
+        <h2>Formulario de Contacto</h2>
+        <form action="#" method="post">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required placeholder="Ej: tu.email@ejemplo.com">
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej: 123-456-7890">
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="18" max="99">
+
+            <label for="nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="nacimiento" name="nacimiento">
+
+            <label for="url">URL de Portafolio:</label>
+            <input type="url" id="url" name="url" placeholder="https://tu-portafolio.com">
+
+            <label for="cv">Adjuntar CV:</label>
+            <input type="file" id="cv" name="cv">
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <label for="especialidad">Área de especialidad:</label>
+            <select id="especialidad" name="especialidad">
+                <option value="frontend">Desarrollo Front-end</option>
+                <option value="backend">Desarrollo Back-end</option>
+                <option value="fullstack">Desarrollo Full-stack</option>
+            </select>
+            
+            <fieldset>
+                <legend>Género:</legend>
+                <label><input type="radio" name="genero" value="masculino"> Masculino</label>
+                <label><input type="radio" name="genero" value="femenino"> Femenino</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Tecnologías que dominas:</legend>
+                <label><input type="checkbox" name="tech" value="html"> HTML</label>
+                <label><input type="checkbox" name="tech" value="css"> CSS</label>
+                <label><input type="checkbox" name="tech" value="js"> JavaScript</label>
+            </fieldset>
+
+            <div>
+                <button type="submit">Enviar</button>
+                <button type="reset">Resetear</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 - [Tu Nombre]. Todos los derechos reservados.</p>
+        <p>
+            <a href="#">LinkedIn</a> |
+            <a href="#">GitHub</a>
+        </p>
+    </footer>
+
+</body>
+</html>
