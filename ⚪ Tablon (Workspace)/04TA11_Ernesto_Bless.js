@@ -6,6 +6,7 @@ const inputConfirmarContraseña = document.getElementById('confirmar-contraseña
 const inputFechaNacimiento = document.getElementById('nacimiento')
 const inputTelefono = document.getElementById('telefono')
 const inputDNINIE = document.getElementById('DNINIE')
+const inputWeb = document.getElementById('web')
 
 function showError(input, message) {
   const errorSpan = input.nextElementSibling;
@@ -21,32 +22,16 @@ form.addEventListener('input', (e) => {
   const target = e.target;
   const inputValue = target.value.trim();
 
-  switch (target.id) {
-    case 'nombre-completo':
-      validarNombre(target, inputValue);
-      break;
-    case 'correo':
-      validarCorreo(target, inputValue);
-      break;
-    case 'contraseña':
-      validarContraseña(target, inputValue);
-      if (inputConfirmarContraseña.value.trim() !== '') {
-        validarConfirmarContraseña(inputConfirmarContraseña, inputConfirmarContraseña.value.trim());
-      }
-      break;
-    case 'confirmar-contraseña':
-      validarConfirmarContraseña(target, inputValue);
-      break;
-    case 'nacimiento':
-      validarFechaNacimiento(target, inputValue);
-      break;
-    case 'telefono':
-      validarTelefono(target, inputValue);
-      break;
-    case 'DNINIE':
-      validarDNINIE(target, inputValue);
-  }
-}); 
+  target.id === 'nombre-completo' ? validarNombre(target, inputValue) :
+  target.id === 'correo' ? validarCorreo(target, inputValue) :
+  target.id === 'contraseña' ? (validarContraseña(target, inputValue), inputConfirmarContraseña.value.trim() !== '' && validarConfirmarContraseña(inputConfirmarContraseña, inputConfirmarContraseña.value.trim())) :
+  target.id === 'confirmar-contraseña' ? validarConfirmarContraseña(target, inputValue) :
+  target.id === 'nacimiento' ? validarFechaNacimiento(target, inputValue) :
+  target.id === 'telefono' ? validarTelefono(target, inputValue) :
+  target.id === 'DNINIE' ? validarDNINIE(target, inputValue) :
+  target.id === 'web' ? validarWeb(target, inputValue) :
+  null;
+});
 
 function validarNombre(input, value) {
   if (value === '') {
@@ -98,7 +83,7 @@ function validarFechaNacimiento(input, value) {
   if (value === '') {
     showError(input, 'La fecha de nacimiento es obligatoria.');
   } else if (!/^\d{1,2}[/-]\d{1,2}[/-]\d{2,4}$/.test(value)) {
-    showError(input, 'Por favor, ingresa una fecha valida. (01/01/2025) o (01-01-25)');
+    showError(input, 'Por favor, ingresa una fecha valida.');
   } else {
     const partesFecha = value.split(/[/-]/);
     const añoInput = parseInt(partesFecha[2]);
@@ -151,5 +136,13 @@ function validarDNINIE(input, value) {
     } else {
       clearError(input);
     }
+  }
+}
+
+function validarWeb(input, value) {
+  if (value === '') {
+    showError(input, 'Esto obligatorio perro');
+  } else {
+    clearError(input);
   }
 }
