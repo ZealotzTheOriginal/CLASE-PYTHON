@@ -22,33 +22,37 @@
 <body>
     <div class="container">
         <h1 class="text-center">Formulario de Validaciones</h1>
-        <form>
-                <label for="nombre-completo" class="form-label">Nombre completo</label>
+        <form>  
+                <label for="nombre-completo" class="form-label">1. Nombre completo</label>
                 <input type="text" id="nombre-completo" name="nombre-completo" required pattern="^[a-zA-ZáéíóúÁÉÍÓÚ\s]+$" minlength="3" class="form-control"/>
                 <span class="error-message" aria-live="polite"></span>
 
-                <label for="correo" class="form-label">Correo Electronico</label>
+                <label for="correo" class="form-label">2. Correo Electronico</label>
                 <input type="text" id="correo" name="correo" required minlength="3" class="form-control"/>
                 <span class="error-message" aria-live="polite"></span>
 
-                <label for="contraseña" class="form-label">Contraseña</label>
+                <label for="contraseña" class="form-label">3. Contraseña</label>
                 <input type="text" id="contraseña" name="contraseña" required minlength="8" class="form-control"/>
                 <span class="error-message" aria-live="polite"></span>
 
-                <label for="confirmar-contraseña" class="form-label">Confirmar Contraseña</label>
+                <label for="confirmar-contraseña" class="form-label">4. Confirmar Contraseña</label>
                 <input type="text" id="confirmar-contraseña" name="confirmar-contraseña" required minlength="8" class="form-control"/>
                 <span class="error-message" aria-live="polite"></span>
 
-                <label for="nacimiento" class="form-label">Fecha de Nacimiento</label>
+                <label for="nacimiento" class="form-label">5. Fecha de Nacimiento</label>
                 <input type="text" id="nacimiento" name="nacimiento" required class="form-control"/>
                 <span class="error-message" aria-live="polite"></span>
 
-                <label for="telefono" class="form-label">Teléfono</label>
+                <label for="telefono" class="form-label">6. Teléfono</label>
                 <input type="text" id="telefono" name="telefono" required class="form-control"/>
                 <span class="error-message" aria-live="polite"></span>
 
-                <label for="DNINIE" class="form-label">DNI / NIE</label>
+                <label for="DNINIE" class="form-label">7. DNI / NIE</label>
                 <input type="text" id="DNINIE" name="DNINIE" required class="form-control"/>
+                <span class="error-message" aria-live="polite"></span>
+
+                <label for="web" class="form-label">8. Página Web</label>
+                <input type="text" id="web" name="web" required class="form-control"/>
                 <span class="error-message" aria-live="polite"></span>
         </form>
     </div>
