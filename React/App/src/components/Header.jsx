@@ -1,13 +1,9 @@
-// src/components/Header.jsx
 import React from 'react';
 
-function Header() {
-  return (
-    <header className="header">
-      <h1>Mini-Proyecto</h1>
-      <h2>Ernesto Contreras</h2>
-    </header>
-  );
-}
+const Header = () => (
+  <header className="bg-blue-500 text-white text-center p-4 shadow-md">
+    <h1 className="text-2xl font-bold">Encabezado</h1>
+  </header>
+);
 
 export default Header;

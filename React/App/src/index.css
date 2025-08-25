@@ -1,10 +1,10 @@
 /* src/index.css */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Inter', sans-serif;
   background-color: #f0f2f5;
   color: #333;
   margin: 0;
-  padding: 20px;
+  padding: 0;
   display: flex;
   justify-content: center;
 }
@@ -12,8 +12,46 @@ body {
 .app {
   max-width: 1200px;
   width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
+/* -------------------- Estilos para el Navbar -------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #34495e;
+  color: #ecf0f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #adb5bd;
+}
+
+/* -------------------- Estilos existentes (mejorados) -------------------- */
 .header {
   background-color: #ffffff;
   padding: 20px;
@@ -42,7 +80,13 @@ body {
 }
 
 .card:hover { transform: translateY(-5px); }
-.card-img { width: 100%; height: 150px; object-fit: contain; padding: 10px; background-color: #ecf0f1; }
+.card-img { 
+  width: 100%; 
+  height: 150px; 
+  object-fit: contain; 
+  padding: 10px; 
+  background-color: #ecf0f1; 
+}
 .card-content { padding: 15px; }
 .card-content h3 { margin: 0 0 10px 0; color: #3498db; }
 
