@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export default function Contador() {
     const [contador, setContador] = useState(0);
-    const [nombre, setNombre] = useState('AKJHSDJHKASD');
+    const [nombre, setNombre] = useState('Sin Nombre');
     const [count, setCount] = useState(0);
 
     const increment = () => setCount(c => c + 1);
@@ -15,7 +15,7 @@ export default function Contador() {
             <button onClick={() => setContador(contador + 1)}>Sumar</button>
             <button onClick={() => setContador(contador - 1)}>Restar</button>
             <button onClick={() => setContador(0)}>Reiniciar</button>
-            <button onClick={() => setNombre('PEPO')}>Cambiar Nombre</button>
+            <button onClick={() => setNombre('Nombre Nuevo')}>Cambiar Nombre</button>
             <p>{nombre}</p>
 
             <p>Contador: {count}</p>

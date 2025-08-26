@@ -38,40 +38,54 @@ footer {
 }
 .card {
   border: 1px solid #e8eaef;
-  box-shadow: 0px 0px 10px 1px rgb(29, 40, 48);
+  box-shadow: 0px 2px 3px 1px rgb(224, 224, 224);
   border-radius: 10px;
   padding: 12px;
   background: #ffffff;
 }
+.card-image {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.card-content {
+  padding: 16px;
+}
 .badge {
-  font-size: 12px;
-  padding: 2px 8px;
+  font-size: 16px;
+  padding: 2px 12px;
   border-radius: 999px;
   background: #eef2ff;
   display: inline-block;
 }
-.badge_low {
+.badge_low, .badge_Alive {
   color: #14ae2b;
-  font-size: 12px;
-  padding: 2px 8px;
+  font-size: 16px;
+  padding: 2px 12px;
   border-radius: 999px;
   border: 1px solid #14ae2b;
   background-color: #c9ffd1;
   display: inline-block;
 }
-.badge_medium {
+.badge_medium, .badge_unknown {
   color: #e1ac00;
-  font-size: 12px;
-  padding: 2px 8px;
+  font-size: 16px;
+  padding: 2px 12px;
   border-radius: 999px;
   border: 1px solid #e1ac00;
   background-color: #ffefc0;
   display: inline-block;
 }
-.badge_high {
+.badge_high, .badge_Dead {
   color: #c42a2a;
-  font-size: 12px;
-  padding: 2px 8px;
+  font-size: 16px;
+  padding: 2px 12px;
   border-radius: 999px;
   border: 1px solid #c42a2a;
   background-color: #ffc0c0;
@@ -83,4 +97,67 @@ footer {
   border-radius: 8px;
   color: #64748b;
   background: #ffffff;
+}
+button,
+.button {
+  display: inline-block;
+  padding: 10px 22px;
+  margin: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #345091;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+button:hover,
+.button:hover {
+  background: #8dafff;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:focus,
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(109, 153, 255, 0.5), 0px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #333333;
+  background-color: #ffffff;
+  border: 1px solid #e8eaef;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:hover,
+select:hover {
+  border-color: #c0c0c0;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #6d99ff;
+  box-shadow: 0 0 0 4px rgba(109, 153, 255, 0.3);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  padding: 0;
 }
