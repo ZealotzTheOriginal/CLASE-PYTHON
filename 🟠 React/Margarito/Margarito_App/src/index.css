@@ -11,50 +11,192 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: auto;
+}
+
+.MemePro, .MemeProInverted {
+  opacity: 0%;
+  transition: opacity 0.5s ease-in 1s;
+}
+
+.MemePro.is-visible, .MemeProInverted.is-visible {
+  opacity: 100%;
+  z-index: 1;
+}
+
+.MemeProInverted {
+  transform: scaleX(-1);
+}
+
+.MemeTwenty {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+.MemeDisco {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.MemeDisco.visible {
+  opacity: 0.4;
+}
+
+.NavbarParty {
+  font-size: 24px;
+  background-image: linear-gradient(to bottom, #1e0041 25%, #080808);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 50px;
+  overflow: auto;
+  justify-content: center;
+  top: 0;
+  z-index: 0;
+}
+
+.NavbarPro {
+  font-size: 24px;
+  background-image: linear-gradient(to bottom, #1e0041 25%, #080808);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  overflow: auto;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.NavbarGradient {
+  background-image: linear-gradient(to bottom, #080808 20%, #08080800);
+  display: flex;
+  width: 100%;
+  height: 102px;
+  overflow: auto;
+  position: sticky;
+  top: 102px;
+  z-index: 2;
 }
 
 .NavbarIMG{
-  width: 128px;
-  height: 128px;
-  margin-right: 32px;
+  margin: 8px;
+  width: 86px;
+  height: 86px;
   border-radius: 100px;
+  margin-right: auto;
+}
+
+.NavbarIMG_Eraser{
+  margin: 8px;
+  width: 86px;
+  height: 86px;
+  border-radius: 100px;
+  margin-left: auto;
+}
+
+.NavbarIMG_Decoration{
+  width: 64px;
+  height: 64px;
+}
+
+.NavbarIMG_Decoration_Inverted{
+  width: 64px;
+  height: 64px;
+  transform: scaleX(-1);
 }
 
 img{
   width: 100%;
-  height: 64px;
-  margin-right: 32px;
+  height: 100%;
   border-radius: 16px;
+  -webkit-user-drag: none; /* Prefijo específico para navegadores WebKit */
+  user-drag: none;
 }
 
 a {
   font-weight: 500;
-  color: #b853f2;
+  color: #ffffff;
   text-decoration: inherit;
   
 }
 
 .HeaderPro {
-
+  background-image: url(https://i.pinimg.com/originals/34/1e/80/341e800b1f29d3e34ea2eba5a6af205c.gif);
+  background-repeat: repeat;
+  width: 100%;
+  height: 296px;
+  margin: 0px 32px 0px 32px;
+  z-index: 1;
 }
 
 .FooterPro {
   font-size: 14px;
-  background-color: #1a1a1a;
+  background-image: linear-gradient(to top, #1e0041 25%, #080808);
   display: flex;
   align-items: center;
   gap: 32px;
-  min-width: 90vw;
+  width: 100%;
+  height: 128px;
+  margin-top: 32px;
   justify-content: center;
 }
 
-.NavbarPro {
-  font-size: 24px;
-  background-color: #1a1a1a;
+.MainPro {
+  font-size: 14px;
+  background-color: #36055e;
   display: flex;
+  flex-direction: row; 
   align-items: center;
   gap: 32px;
-  min-width: 90vw;
+  width: 90%;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.ArticlePro {
+  font-size: 14px;
+  background-color: #130325;
+  border-radius: 8px;
+  width: 200px;
+  min-height: 200px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.SectionPro {
+  font-size: 14px;
+  background-color: #17042e;
+  border-radius: 8px;
+  color: #fff;
+  min-height: 150px;
+  width: 100%;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 a:hover {
@@ -102,5 +244,14 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@keyframes show-gif {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
